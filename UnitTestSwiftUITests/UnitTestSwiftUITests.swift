@@ -6,6 +6,7 @@
 //
 
 import Testing
+import XCTest
 @testable import UnitTestSwiftUI
 
 struct UnitTestSwiftUITests {
@@ -14,4 +15,12 @@ struct UnitTestSwiftUITests {
         // Write your test here and use APIs like `#expect(...)` to check expected conditions.
     }
 
+    @Test func test_UnitTestingBootcampViewModel_isPremuium_shouldBeTrue(){
+        //Given
+        let userIsPremium:Bool = false
+        //When
+        let vm = UnitTestBootcampViewModel(isPremium: userIsPremium)
+        //Then
+        XCTAssertTrue(vm.isPremium)
+    }
 }

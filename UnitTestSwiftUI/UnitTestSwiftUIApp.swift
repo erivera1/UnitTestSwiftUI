@@ -11,7 +11,10 @@ import SwiftUI
 struct UnitTestSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            UnitTestBootcampView(isPremium: true)
+//            ContentView()
+            UnitTestBootcampView(viewModel: UnitTestBootcampViewModel(isPremium: false))
+//            UnitTestBootcampView()
         }
     }
 }
